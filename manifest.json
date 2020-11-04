@@ -1,0 +1,28 @@
+{
+  "name": "Auto Dark",
+  "version": "1.0",
+  "description": "A tool turns the bright into dark.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "browser_action": {
+    "default_title": "Auto Dark",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "manifest_version": 2
+}
