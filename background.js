@@ -19,7 +19,11 @@ chrome.browserAction.onClicked.addListener(function (tab) {
     chrome.storage.sync.get(["bgColor", "textColor"], function (data) {
       chrome.tabs.executeScript({
         code:
-          "let style=document.createElement('style');style.append('.auto-dark{background-color: #000;color: #fff;}');document.body.appendChild(style);",
+          "let style=document.createElement('style');style.append('.auto-dark{background-color:" +
+          data.bgColor +
+          ";color:" +
+          data.textColor +
+          ";}');document.head.appendChild(style);",
       });
       chrome.tabs.executeScript(tabs[0].id, {
         code: 'document.body.classList.toggle("auto-dark");',
